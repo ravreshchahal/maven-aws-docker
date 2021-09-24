@@ -1,4 +1,4 @@
-FROM maven:3-amazoncorretto-16
+FROM maven:3-amazoncorretto-17
 
 LABEL maintainer="RADtech <info@radtechsoft.com>"
 
