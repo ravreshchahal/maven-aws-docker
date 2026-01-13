@@ -1,11 +1,12 @@
 FROM maven:3-amazoncorretto-17
 
-LABEL maintainer="RADtech <info@radtechsoft.com>"
+LABEL maintainer="Ravresh <ravresh.chahal@gmail.com>"
 
 RUN amazon-linux-extras install docker
 RUN yum update -y && yum install -y unzip groff
 RUN curl --silent --show-error --fail "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
 RUN unzip awscliv2.zip
 RUN ./aws/install
+
 
 CMD [ "mvn" ]
